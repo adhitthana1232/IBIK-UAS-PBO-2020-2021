@@ -9,14 +9,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 class Users{
-	private Integer NIK;
+	private long NIK;
 	private String Fullname;
 	private String Address;
 	
-	public Integer getNIK() {
+	public long getNIK() {
 		return NIK;
 	}
-	public void setNIK(Integer nIK) {
+	public void setNIK(long nIK) {
 		NIK = nIK;
 	}
 	public String getFullname() {
@@ -52,7 +52,7 @@ class Profile extends Users{
 }
 
  class Main extends JFrame{	
-	private Integer NIK = 320231007;
+	private long NIK = 3202310072L;
 	private String Fullname = "Doctor Stephen Vincent Strange M.D., Ph.D";
 	private String Address = "The mansion of Doctor Stephen Strange is located at 177A Bleecker Street, "
 							+ "New York City, NY 10012-1406";
