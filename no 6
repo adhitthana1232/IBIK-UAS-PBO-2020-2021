@@ -9,14 +9,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 class Users{
-	private long NIK;
+	private Integer NIK;
 	private String Fullname;
 	private String Address;
 	
-	public long getNIK() {
+	public Integer getNIK() {
 		return NIK;
 	}
-	public void setNIK(long nIK) {
+	public void setNIK(Integer nIK) {
 		NIK = nIK;
 	}
 	public String getFullname() {
@@ -40,18 +40,19 @@ class Profile extends Users{
 		return Avatar;
 	}
 
-	
+	public void setAvatar(String avatar) {
+		Avatar = avatar;
+	}
 	public Image fetchingAvatar() throws IOException {
 		URL url = new URL(Avatar);
         Image image = ImageIO.read(url);
         return image;
 	}
-	public void setAvatar(String imageAvatar) {
-	}
+
 }
 
-class Main extends JFrame{	
-	private long NIK = 3202310072L;
+ class Main extends JFrame{	
+	private Integer NIK = 320231007;
 	private String Fullname = "Doctor Stephen Vincent Strange M.D., Ph.D";
 	private String Address = "The mansion of Doctor Stephen Strange is located at 177A Bleecker Street, "
 							+ "New York City, NY 10012-1406";
